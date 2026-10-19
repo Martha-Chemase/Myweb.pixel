@@ -1,24 +1,20 @@
-/* ==========================================================
-   MID-NET Stylesheet
-   Save as: sts/css/style.css
-   ========================================================== */
 
 :root {
-  --navy: #0b2545;
-  --blue: #13548f;
-  --teal: #0fa3a3;
-  --teal-dark: #0b7f7f;
-  --light: #f3f7fb;
-  --white: #ffffff;
-  --text: #25313f;
-  --muted: #5d6b7a;
-  --border: #dbe4ee;
-  --radius: 14px;
+  --navy:#0b3d2e ;
+  --blue: #1b6b4a;
+  --teal:#1e9e5a;
+  --teal-dark: #137a45;
+  --light: #f2f8f4;
+  --white:#ffffff ;
+  --text: #22332b;
+  --muted: #5a6e63;
+  --border: #d6e6dc;
+  --radius: 20px;
   --shadow: 0 6px 24px rgba(11, 37, 69, 0.08);
   --shadow-hover: 0 12px 32px rgba(11, 37, 69, 0.16);
 }
 
-/* ---------- Reset & base ---------- */
+
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -37,7 +33,7 @@ a:hover { color: var(--teal-dark); }
 
 h1, h2, h3 { color: var(--navy); line-height: 1.25; }
 
-/* ---------- Navigation ---------- */
+
 header {
   position: sticky;
   top: 0;
@@ -100,7 +96,7 @@ header {
   color: var(--white);
 }
 
-/* ---------- Hero (first section in body) ---------- */
+
 body > section:first-of-type {
   text-align: center;
   padding: 6rem 1.5rem 5.5rem;
@@ -157,7 +153,7 @@ body > section:first-of-type a + a:hover {
   color: var(--navy);
 }
 
-/* ---------- Intro content sitting directly in <body> ---------- */
+
 body > h2,
 body > h3,
 body > p,
@@ -193,7 +189,7 @@ body > h3 { margin-top: 3rem; margin-bottom: 0.5rem; }
 
 body > p { color: var(--text); margin-bottom: 1rem; }
 
-/* Video */
+
 body > iframe {
   display: block;
   height: auto;
@@ -204,7 +200,7 @@ body > iframe {
   box-shadow: var(--shadow);
 }
 
-/* ---------- Table ---------- */
+
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -235,16 +231,17 @@ tr:nth-child(even) td { background: #f8fbfd; }
 tr:hover td { background: #e9f6f6; }
 td:first-child { font-weight: 600; color: var(--navy); width: 38%; }
 
-/* ---------- Photo ---------- */
+
 body > img {
   display: block;
-  max-width: 100%;
+  width: min(1000px, calc(100% - 3 rem));
   height: auto;
-  margin-top: 1.5rem;
+  aspect-ratio: 16/9;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  object-fit: cover;
+  object-fit:cover;
 }
 
 /* ---------- Main container ---------- */
@@ -253,7 +250,7 @@ body > img {
   margin: 2rem auto 3rem;
 }
 
-/* ---------- Mission / Vision / Values grid ---------- */
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -295,7 +292,7 @@ body > img {
 .col-md-4 p,
 .col-md-12 p { margin: 0; color: var(--muted); }
 
-/* Lists inside cards: teal tick bullets */
+
 .col-md-4 ul,
 .col-md-12 ul {
   list-style: none;
@@ -320,7 +317,6 @@ body > img {
   font-weight: 700;
 }
 
-/* ---------- Generic sections inside .container ---------- */
 .container section {
   margin: 3.5rem 0;
 }
@@ -360,7 +356,7 @@ body > img {
 .container section > div h3 { margin: 0 0 0.5rem; }
 .container section > div p { margin: 0; color: var(--muted); }
 
-/* Working groups & resources: pill-style link lists */
+
 .container section > ul {
   list-style: none;
   margin: 0;
@@ -421,7 +417,6 @@ article a {
 
 article a::after { content: " →"; }
 
-/* Call-to-action "Join the Network" (section with p + single link) */
 .container section:has(> a) {
   text-align: center;
   padding: 3rem 2rem;
@@ -455,7 +450,7 @@ article a::after { content: " →"; }
   transform: translateY(-2px);
 }
 
-/* ---------- Newsletter card (nested .container) ---------- */
+
 .container .container {
   width: 100%;
   max-width: 560px;
@@ -483,7 +478,6 @@ article a::after { content: " →"; }
 .container .container p { margin: 0.3rem 0; color: var(--muted); }
 .container .container .subtitle { font-size: 0.9rem; margin-bottom: 1.2rem; }
 
-/* ---------- Form ---------- */
 form { text-align: left; margin-top: 1rem; }
 form br { display: none; }
 
@@ -535,7 +529,7 @@ input[type="submit"]:hover {
   box-shadow: 0 8px 20px rgba(15, 163, 163, 0.35);
 }
 
-/* ---------- Responsive ---------- */
+
 @media (max-width: 720px) {
   .navbar { justify-content: center; text-align: center; }
   .nav-links { justify-content: center; }
